@@ -1,15 +1,32 @@
 public class AkunBank {
     
     public static int jumlahAkun = 0;
+    public String pemilik;
     private int saldo;
+    private String pin;
 
-    public AkunBank(int saldo){
-        this.saldo = saldo;
-        jumlahAkun += 1;
+    public AkunBank( String pemilik,int saldo, String pin){
+        if (pin.length() != 6){
+            throw new ArithmeticException("Pin harus 6 digit"); 
+        } else{
+            this.pemilik = pemilik;
+            this.saldo = saldo;
+            this.pin = pin;
+            jumlahAkun += 1;
+        }
     }
 
     public void setSaldo(int saldo){
         this.saldo = saldo;
+    }
+
+    public boolean inputPin ( String pin ){
+        if(pin.length() != 6 || pin != this.pin){
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 
     public int getSaldo(){
