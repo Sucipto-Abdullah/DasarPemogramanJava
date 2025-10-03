@@ -1,3 +1,5 @@
+// package praktikum05;
+
 class Hewan {
 
     private int usia;
@@ -50,7 +52,7 @@ class Hewan {
     
 }
 
-class Kucing extends Hewan{
+public class Kucing extends Hewan{
 
     public enum RasKucing{
         PERSIA,

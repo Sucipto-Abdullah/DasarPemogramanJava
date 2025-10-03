@@ -1,4 +1,4 @@
-class testHewan {
+public class testHewan {
 
     public static void main(String[] args) {
         
